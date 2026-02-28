@@ -1,0 +1,69 @@
+﻿<Window
+    x:Class="WiredBrainCoffee.CustomersApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WiredBrainCoffee.CustomersApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+  <Grid Background="#222222">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+      <RowDefinition/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <!-- Header -->
+    <StackPanel Background="#F05A28" Orientation="Horizontal">
+      <Image Source="/Images/logo.png" Width="100"/>
+      <TextBlock Text="Customers App" FontSize="30" 
+                 Foreground="White"/>
+      <TextBlock Text="Version 1.0" FontSize="16"
+                 Foreground="#333333"/>
+    </StackPanel>
+
+    <!-- Customer list -->
+    <StackPanel Background="#333333">
+      <StackPanel Orientation="Horizontal">
+        <Button Margin="10">
+          <StackPanel Orientation="Horizontal">
+            <SymbolIcon Symbol="AddFriend"/>
+            <TextBlock Text="Add" Margin="5 0 0 0"/>
+          </StackPanel>
+        </Button>
+        <Button Margin="0 10 10 10">
+          <StackPanel Orientation="Horizontal">
+            <SymbolIcon Symbol="Delete"/>
+            <TextBlock Text="Delete" Margin="5 0 0 0"/>
+          </StackPanel>
+        </Button>
+        <Button Margin="0 10 10 10">
+          <SymbolIcon Symbol="Forward"/>
+        </Button>
+      </StackPanel>
+      <ListView>
+        <ListViewItem>Julia</ListViewItem>
+        <ListViewItem>Alex</ListViewItem>
+        <ListViewItem>Thomas</ListViewItem>
+      </ListView>
+    </StackPanel>
+
+    <!-- Customer detail -->
+    <StackPanel Margin="10">
+      <TextBox Header="Firstname"/>
+      <TextBox Header="Lastname"/>
+      <CheckBox Margin="0 20 0 0">
+        Is developer
+      </CheckBox>
+    </StackPanel>
+
+    <!-- Statusbar -->
+    <Border Background="#444">
+      <TextBlock Text=" (c) Wired Brain Coffee" Foreground="White" Margin="5"/>
+    </Border>
+  </Grid>
+</Window>
